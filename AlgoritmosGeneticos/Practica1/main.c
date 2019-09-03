@@ -88,18 +88,5 @@ void MostrarHistograma(int *L)
         {
             printf("-");
         }        
-    }
-    /*
-    for ( i = 0; i < 200; i++)
-    {
-        if (i == 199)
-        {
-            printf("d\n",i);
-        }
-        else
-        {
-            printf("%d",i);
-        }        
-    }
-    */    
+    }  
 }
