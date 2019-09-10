@@ -44,7 +44,7 @@ double * PoblarLista(int n, double * L)
     srand(time(NULL));
     int i;
     for (i = 0; i < 10+n; i++)
-        L[i] = rand() % 100 + 1;
+        L[i] = rand() % 50 + 1;
     MostrarLista(L);
     return L;
 }
@@ -81,6 +81,10 @@ double * FuncionCuadrado(double * L)                  //funcion para evaluar num
         else
             printf("%.0lf,",L[i]);
     }
+    fflush(stdin);
+    getchar();
+    fflush(stdin);
+    getchar();
     return L;
 }
 
