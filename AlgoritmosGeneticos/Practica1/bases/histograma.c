@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//Muestra desde un numero maximo hasta minimo un histograma
 int main()
 {
     int c, i, j, max;

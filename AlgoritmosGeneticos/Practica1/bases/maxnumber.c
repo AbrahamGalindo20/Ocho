@@ -2,6 +2,7 @@
  
 int main()
 {
+  //Indica la ubicación y valor de el numero mayor
   int array[100], maximum, size, c, location = 1;
  
   printf("Enter the number of elements in array\n");
