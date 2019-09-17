@@ -65,7 +65,7 @@ def ImprimirLista(L):
     for x in range (0,4):
         print("Lista[{}] = [".format(x+1)),
         for y in range (0,len(L[x])):
-            if (y == len(L[x]) - 1):
+            if (y == len(L[x])-1):
                 print(L[x][y]),
             else:
                 print(L[x][y]),
@@ -87,7 +87,7 @@ def FuncionBinario(L):
     aux = L
     for y in range (0 , 4):
         for x in range (0 , len(L[y])):
-            aux[y][x] = bin(L[y][x])
+            aux[y][x] = bin(L[y][x])[2:].zfill(8)
     return aux
 
 def main():
