@@ -87,19 +87,35 @@ def FuncionBinario(L):
     aux = L
     for y in range (0 , 4):
         for x in range (0 , len(L[y])):
-            aux[y][x] = bin(L[y][x])[2:].zfill(8)
+            #aux[y][x] = bin(L[y][x])[2:].zfill(8)
+            aux[y][x] = bin(L[y][x])[2:]
     return aux
+
+def FuncionGray(L):
+    aux = L
+    for y in range(0,4):
+        for x in range(0,len(L[y])):
+            aux[y][x] = int(L[y][x], 2)
+            aux[y][x] ^= (aux[y][x] >> 1)
+            aux[y][x] = bin(aux[y][x])[2:]
+            #aux[y][x] = bin(aux[y][x])[2:].zfill(8)
+    return aux
+        
 
 def main():
     print("Practica 2")
     Arreglos = []
     Arreglos = PoblarLista(Arreglos)
     ArreglosBinario = []
+    ArreglosGray = []
     print("Todas las listas quedan como: ")
     ImprimirLista(Arreglos)
     print("Todas las listas en binario quedan como:")
     ArreglosBinario = FuncionBinario(Arreglos)
     ImprimirListaBinaria(ArreglosBinario)
+    print("Todas las listas en codigo gray quedan como:")
+    ArreglosGray = FuncionGray(Arreglos)
+    ImprimirListaBinaria(ArreglosGray)
     
 if __name__ == '__main__':
     main()
