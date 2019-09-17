@@ -1,11 +1,11 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import random
 import unicodedata
 import re
 #Codigo realizado por Jose Emiliano para la materia de Algoritmos Geneticos 3CM8
 
 def EsEntero(valor):
-    patron = re.compile("^[0-9][0-9]*\.?[0-9]*")
+    patron = re.compile(r"^[0-9][0-9]*\.?[0-9]*")
     flag = re.search(patron, valor)
     if flag:
         return True
@@ -48,7 +48,8 @@ def CrearLista(i):
     rango = VerificarInputRango(i)
     Lista = []
     for x in range (0 , longitud):
-        a = random.randint(0,rango)
+        a = random.randint(1,rango)
+        print("Anexando el valor " + str(a) + " a la lista en la posicion " + str(x+1))
         Lista.append(a)
     return Lista
 
