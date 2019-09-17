@@ -4,6 +4,23 @@ import unicodedata
 import re
 #Codigo realizado por Jose Emiliano para la materia de Algoritmos Geneticos 3CM8
 
+def GenerarBitAleatorio():
+    x = random.random()
+    print(x)
+    if x > 0.5:
+        print("El valor es mayor a .5, asi que es 1")
+        return 1
+    else:
+        print("El valor es menor a .5, asi que es 0")
+        return 0
+
+def GenerarNumeroAleatorio(rango):
+    num = []
+    for x in range(0,rango):
+        print("de {} a rango {}".format(x,rango))
+        num.append(GenerarBitAleatorio())
+    return num
+
 def EsEntero(valor):
     patron = re.compile(r"^[0-9][0-9]*\.?[0-9]*")
     flag = re.search(patron, valor)
@@ -44,11 +61,13 @@ def VerificarInputRango(i):
     return rango
 
 def CrearLista(i):
-    longitud = VerificarInputTamano(i)
-    rango = VerificarInputRango(i)
+    #longitud = VerificarInputTamano(i)
+    #rango = VerificarInputRango(i)
+    longitud = 6
+    rango = 6
     Lista = []
     for x in range (0 , longitud):
-        a = random.randint(1,rango)
+        a = GenerarNumeroAleatorio(rango)
         #print("Anexando el valor " + str(a) + " a la lista en la posicion " + str(x+1))
         Lista.append(a)
     return Lista
