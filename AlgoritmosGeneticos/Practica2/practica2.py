@@ -32,7 +32,7 @@ def VerificarInputTamano(i):
 def VerificarInputRango(i):
     flag = False
     while not flag:
-        print("Introducir el rango de la lista " + str(i + 1)+ " 0 -> n (maximo 300) en entero")
+        print("Introducir el rango de la lista " + str(i + 1)+ "\n (0 -> n) (maximo 300) en entero")
         rango = raw_input()
         flag = EsEntero(rango)
         if (flag == False):
@@ -49,7 +49,7 @@ def CrearLista(i):
     Lista = []
     for x in range (0 , longitud):
         a = random.randint(1,rango)
-        print("Anexando el valor " + str(a) + " a la lista en la posicion " + str(x+1))
+        #print("Anexando el valor " + str(a) + " a la lista en la posicion " + str(x+1))
         Lista.append(a)
     return Lista
 
@@ -62,24 +62,44 @@ def PoblarLista(L):
     return L
 
 def ImprimirLista(L):
-    for x in range (0,len(L)):
-        print(str(L[x]) + "\n")
+    for x in range (0,4):
+        print("Lista[{}] = [".format(x+1)),
+        for y in range (0,len(L[x])):
+            if (y == len(L[x]) - 1):
+                print(L[x][y]),
+            else:
+                print(L[x][y]),
+                print(","),
+        print("]\n")
+        
+def ImprimirListaBinaria(L):
+    for x in range (0,4):
+        print("Lista[{}] = [".format(x+1)),
+        for y in range (0, len(L[x])):
+            if (y == len(L[x]) - 1) :
+                print(L[x][y]),
+            else:
+                print(L[x][y]),
+                print(","),
+        print("]\n")
 
-def FuncionCuadrado(L):
+def FuncionBinario(L):
+    aux = L
     for y in range (0 , 4):
         for x in range (0 , len(L[y])):
-            L[y][x] = L[y][x] * L[y][x]
-    return L
+            aux[y][x] = bin(L[y][x])
+    return aux
 
 def main():
     print("Practica 2")
     Arreglos = []
     Arreglos = PoblarLista(Arreglos)
+    ArreglosBinario = []
     print("Todas las listas quedan como: ")
     ImprimirLista(Arreglos)
-    print("Todas las listas al cuadrado quedan como:")
-    FuncionCuadrado(Arreglos)
-    ImprimirLista(Arreglos)
+    print("Todas las listas en binario quedan como:")
+    ArreglosBinario = FuncionBinario(Arreglos)
+    ImprimirListaBinaria(ArreglosBinario)
     
 if __name__ == '__main__':
     main()
