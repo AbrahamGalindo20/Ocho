@@ -33,7 +33,17 @@ def CrearBinarios():
         Binario[y] = aux
     return Binario
 
+def PoblarArregloDecimal():
+    min_range = input("Introducir el limite menor de generacion.\n")
+    max_range = input("Introducir el limite mayor de generacion.\n")
+    longitud = input("Introducir el numero de objetos que generara.\n")
+    Decimal = [None] * longitud
+    for x in range (0,longitud):
+        Decimal[x] = random.uniform(min_range,max_range)
+    return Decimal
+
 #Crea el arreglo de decimales a partir del arreglo de binario ya creado
+'''
 def TransformarBinarioDecimal(Binario):
     Decimal = [None] * len(Binario)
     aux = []
@@ -43,6 +53,7 @@ def TransformarBinarioDecimal(Binario):
         Decimal[y] = aux
         aux = []
     return Decimal
+'''
 
 #Crea el arreglo de codigo gray a partir del arreglo de binarios ya creado    
 def TransformarBinarioGray(Binario):
@@ -90,16 +101,6 @@ def ImprimirTodo(Binario,Decimal,Gray):
             else:
                 print("{}, ".format(Binario[y][x])),
         print("]\n")
-    
-    print("Los elementos en decimal son: ")
-    for y in range (0, len(Decimal)):
-        print("L[{}] = [".format(y)),
-        for x in range (0,len(Decimal[y])):
-            if x == len(Decimal[y]) - 1:
-                print("{}".format(Decimal[y][x])),
-            else:
-                print("{},".format(Decimal[y][x])),
-        print("]\n")
 
     print("Los elementos en Gray son: ")
     for y in range (0, len(Gray)):
@@ -110,13 +111,22 @@ def ImprimirTodo(Binario,Decimal,Gray):
             else:
                 print("{},".format(Gray[y][x])),
         print("]\n")
+        
+    print("Los elementos creados en decimal son: ")
+    print("Decimal = ["),
+    for y in range (0, len(Decimal)):
+        if y == len(Decimal) - 1:
+            print("{0:.2f}".format(Decimal[y])),
+        else:
+            print("{0:.2f},".format(Decimal[y])),
+    print("]\n")
 
 def main():
     print("Jose Emiliano Perez Garduno")
     print("********Practica 2********")
 
     Binarios = CrearBinarios()
-    Decimal = TransformarBinarioDecimal(Binarios)
+    Decimal = PoblarArregloDecimal()
     Gray = TransformarBinarioGray(Binarios)
     ImprimirTodo(Binarios,Decimal,Gray)
     
