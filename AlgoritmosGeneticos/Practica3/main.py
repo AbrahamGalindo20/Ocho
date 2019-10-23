@@ -33,7 +33,7 @@ def CrearNumAleatorio(rango,arreglo):
     for x in range(0,rango):
         rand = random.random()
         arreglo.append(rand)
-        print("Guardo el numero {} de la iteracion {}".format(rand,x))
+        #print("Guardo el numero {} de la iteracion {}".format(rand,x))
         aux = aux + str(RegresarBitAleatorio(rand))
     num = int(aux)
     arreglo.append(num)
@@ -99,11 +99,12 @@ def OpcionFitness():
 
         print("El conjunto de individuos queda como:")
         for x in range(0,num_individuos):
-            print(conjunto_individuos[x])
-
+            print(conjunto_individuos[x],end=',')
+        print("\n")
         print("El conjunto de numeros aleatorios queda como:")
         for x in range(0,len(arreglo_num_aleatorios)):
-            print("{0:.2f}".format(arreglo_num_aleatorios[x]))
+            print("{0:.2f}".format(arreglo_num_aleatorios[x]),end=',')
+        print("\n")
 
         flag = False
         while(flag == False):
