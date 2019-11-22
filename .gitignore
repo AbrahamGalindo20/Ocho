@@ -14,12 +14,14 @@ src/_drafts
 package-lock.json
 *.odt
 *.pdf
+*.properties
 
 # Files for the ART/Dalvik VM
 *.dex
 
 # Java class files
-*.class
+*.jar
+*.jad
 
 # Generated files
 bin/
