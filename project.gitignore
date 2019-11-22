@@ -12,6 +12,8 @@ public/
 .deploy*/
 src/_drafts
 package-lock.json
+*.odt
+*.pdf
 
 # Files for the ART/Dalvik VM
 *.dex
