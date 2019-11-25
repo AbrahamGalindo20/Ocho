@@ -1,14 +1,14 @@
 <template>
   <v-app>
-    <AToolbar />
+    <!-- <AToolbar /> -->
   </v-app>
 </template>
 
 <script>
-import AToolBar from "@/components/AToolbar.vue";
+// import AToolBar from "@/components/AToolbar.vue";
 export default {
   components: {
-    AToolBar
+    // AToolBar
   }
 };
 </script>

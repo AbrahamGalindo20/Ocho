@@ -18,17 +18,18 @@
             ahorrando tiempo de busqueda y transformándolo en tiempo de visión.
           </h4>
         </v-col>
+        <v-col class="text-end">
+          <iframe
+            src="https://player.twitch.tv/?video=v367046564&autoplay=true"
+            height="300px"
+            width="40%"
+            frameborder="<frameborder>"
+            scrolling="<scrolling>"
+            allowfullscreen="<allowfullscreen>"
+            autoplay="true"
+          />
+        </v-col>
       </v-row>
-      <iframe
-        src="https://player.twitch.tv/?video=v367046564&autoplay=true&muted=false"
-        height="70%"
-        width="50%"
-        frameborder="<frameborder>"
-        scrolling="<scrolling>"
-        allowfullscreen="<allowfullscreen>"
-        autoplay="true"
-      >
-      </iframe>
     </v-parallax>
   </div>
 </template>

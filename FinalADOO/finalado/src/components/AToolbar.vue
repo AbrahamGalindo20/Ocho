@@ -1,6 +1,13 @@
 <template>
-  <nav color="transparent" flat tile paddles>
-    <v-app-bar dark fixed app class="indigo">
+  <nav
+    color="transparent"
+    flat
+    tile
+    paddles
+    justify-space-around
+    align-baseline
+  >
+    <v-app-bar dark fixed flat app class="indigo" hide-on-scroll>
       <v-app-bar-nav-icon @click="drawer = !drawer" />
       <v-toolbar-title>
         <v-img
@@ -10,11 +17,12 @@
           class="mx-auto"
           color="white"
         />
+        <v-spacer></v-spacer>
       </v-toolbar-title>
-      <v-spacer></v-spacer>
       <v-text-field hide-details prepend-icon="search" single-line>
       </v-text-field>
       <v-spacer></v-spacer>
+
       <div class="text-end">
         <v-menu offset-y>
           <template v-slot:activator="{ on }">
@@ -24,14 +32,20 @@
           </template>
           <v-list>
             <v-list-item
-              v-for="(item, index) in items"
+              v-for="(item_deploy, index) in deploy"
               :key="index"
               @click="of"
             >
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
+              <v-list-item-title align-content-space-between>
+                <v-btn text small flat>
+                  <v-icon icon>{{ item_deploy.icon }}</v-icon>
+                  {{ item_deploy.text }}
+                </v-btn>
+              </v-list-item-title>
             </v-list-item>
           </v-list>
         </v-menu>
+        <v-spacer></v-spacer>
       </div>
     </v-app-bar>
 
@@ -57,9 +71,9 @@
             <v-icon class="white--text">{{ link.icon }}</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title class="white--text">{{
-              link.text
-            }}</v-list-item-title>
+            <v-list-item-title class="white--text">
+              {{ link.text }}
+            </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -79,7 +93,14 @@ export default {
         { icon: "person", text: "Jugadores", route: "/players" },
         { icon: "mdi-logout", text: "Cerrar Sesión", route: "/configuration" }
       ],
-      items: [{ title: "Perfil" }, { title: "Configuración" }]
+      deploy: [
+        {
+          icon: "mdi-arrow-right-bold",
+          title: "Iniciar Sesión",
+          text: "Iniciar Sesión"
+        },
+        { icon: "mdi-checkbook", title: "About", text: "About" }
+      ]
     };
   },
   methods: {
@@ -88,6 +109,9 @@ export default {
     },
     redirect_to_profile() {
       window.location.href = " /profile";
+    },
+    redirect_to_about() {
+      window.location.href = " /about";
     }
   }
 };

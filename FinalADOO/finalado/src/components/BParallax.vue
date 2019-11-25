@@ -15,12 +15,16 @@
           </h4>
         </v-col>
       </v-row>
-      <img
-        src="@/assets/pictures/LogoESCOM.png"
-        alt="logoescom"
-        flat
-        width="10%"
-      />
+      <v-row align="end" justify="end" padless>
+        <v-col class="text-end" justify="end" align="end" align-content-end>
+          <v-img
+            src="@/assets/pictures/LogoESCOM.png"
+            alt="logoescom"
+            flat
+            width="20%"
+          />
+        </v-col>
+      </v-row>
     </v-parallax>
   </div>
 </template>
