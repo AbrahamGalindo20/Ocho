@@ -2,7 +2,6 @@
   <nav color="transparent" flat tile paddles>
     <v-app-bar dark fixed app class="indigo">
       <v-app-bar-nav-icon @click="drawer = !drawer" />
-
       <v-toolbar-title>
         <v-img
           src="@/assets/pictures/logohub2.png"
@@ -13,18 +12,40 @@
         />
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>mdi-account</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
+      <v-text-field hide-details prepend-icon="search" single-line>
+      </v-text-field>
+      <v-spacer></v-spacer>
+      <div class="text-end">
+        <v-menu offset-y>
+          <template v-slot:activator="{ on }">
+            <button v-on="on">
+              <v-icon>mdi-account</v-icon>
+            </button>
+          </template>
+          <v-list>
+            <v-list-item
+              v-for="(item, index) in items"
+              :key="index"
+              @click="of"
+            >
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+      </div>
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" dark app class="indigo">
+      <v-layout column align-center>
+        <v-flex class="mt-5">
+          <v-avatar size="100">
+            <img src="@/assets/avatars/user.png" alt="user.png" />
+          </v-avatar>
+          <p class="white--text subheading mt-1">
+            usuario 1
+          </p>
+        </v-flex>
+      </v-layout>
       <v-list>
         <v-list-item
           v-for="link in links"
@@ -56,13 +77,17 @@ export default {
         { icon: "dashboard", text: "e-sports Hub", route: "/" },
         { icon: "mdi-xbox-controller", text: "Toneos", route: "/folder" },
         { icon: "person", text: "Jugadores", route: "/players" },
-        { icon: "mdi-tools", text: "Configuración", route: "/configuration" }
-      ]
+        { icon: "mdi-logout", text: "Cerrar Sesión", route: "/configuration" }
+      ],
+      items: [{ title: "Perfil" }, { title: "Configuración" }]
     };
   },
   methods: {
     redirect_to_main() {
       window.location.href = "/index";
+    },
+    redirect_to_profile() {
+      window.location.href = " /profile";
     }
   }
 };
