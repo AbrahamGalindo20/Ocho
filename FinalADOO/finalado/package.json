@@ -9,9 +9,11 @@
   },
   "dependencies": {
     "core-js": "^3.3.2",
+    "v-playback": "^1.0.2",
     "vue": "^2.6.10",
     "vue-videobg": "^2.0.0",
-    "vuetify": "^2.1.0"
+    "vuetify": "^2.1.0",
+    "vuetify-media-player": "^0.8.1"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",

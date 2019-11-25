@@ -1,18 +1,19 @@
 <template>
   <v-app>
     <AToolbar />
-    <AParallax> </AParallax>
-    <VideoBg
-      :sources="['@/assets/videos/vid1.mp4']"
-      img="@/assets/pictures/bg-2.jpg"
-    ></VideoBg>
+    <AParallax />
+    <CParallax />
+    <BParallax />
+    <AFooter />
   </v-app>
 </template>
 
 <script>
 import AToolbar from "@/components/AToolbar.vue";
 import AParallax from "@/components/AParallax.vue";
-import VideoBg from "vue-videobg";
+import AFooter from "@/components/AFooter.vue";
+import BParallax from "@/components/BParallax.vue";
+import CParallax from "@/components/CParallax.vue";
 
 export default {
   name: "App",
@@ -20,7 +21,9 @@ export default {
   components: {
     AToolbar,
     AParallax,
-    VideoBg
+    AFooter,
+    BParallax,
+    CParallax
   },
 
   data: () => ({

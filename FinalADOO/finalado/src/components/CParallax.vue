@@ -1,0 +1,42 @@
+<template>
+  <div>
+    <v-parallax src="@/assets/pictures/bg-4.jpg" dark>
+      <v-row align="end" justify="end">
+        <v-col class="text-end" cols="12">
+          <h1 class="display-1 font-weight-thin mb-4">
+            Una nueva forma de ver streamings.
+          </h1>
+          <h4 class="subheading">
+            Gracias a la integración con Twitch, e-sports Hub brinda los
+            streamings más famosos
+          </h4>
+          <h4 class="subheading">
+            a la plataforma para evitar el uso de páginas externas y busquedas
+            innecesarias
+          </h4>
+          <h4 class="subheading">
+            ahorrando tiempo de busqueda y transformándolo en tiempo de visión.
+          </h4>
+        </v-col>
+      </v-row>
+      <!-- <v-playback :url="vid_url" width="10%"/> -->
+    </v-parallax>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      vid_url: "@/assets/videos/vid1.mp4"
+    };
+  },
+  components: {}
+};
+</script>
+
+<style lang="css">
+.v-parallax{
+ size:100% 100%;
+}
+</style>
