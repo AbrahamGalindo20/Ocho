@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-parallax src="@/assets/pictures/bg-1.jpg" height="100%" jumbotron>
+    <v-parallax src="@/assets/pictures/bg-1.jpg" dark fixed>
       <v-row align="center" justify="center">
         <v-col class="text-center" cols="12">
           <h1 class="display-1 font-weight-thin mb-4">e-sports Hub</h1>
