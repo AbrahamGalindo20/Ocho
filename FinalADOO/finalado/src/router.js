@@ -1,6 +1,11 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import App from '@/App.vue';
+import Login from '@/views/Login.vue';
+import Signup from '@/views/Signup.vue';
+import Profile from '@/views/Profile.vue';
+import About from '@/views/About.vue';
+
 Vue.use(Router);
 export default new Router({
     mode: 'history',
@@ -11,28 +16,24 @@ export default new Router({
             component: App
         },
         {
+            path: '/login',
+            name: 'login',
+            component: Login
+        },
+        {
+            path: '/signup',
+            name: 'signup',
+            component: Signup
+        },
+        {
             path: '/about',
             name: 'about',
-            component: () =>
-                import ('./views/About.vue')
+            component: About
         },
         {
-            path: '/menu',
-            name: 'menu',
-            component: () =>
-                import ('./views/Menu.vue')
-        },
-        {
-            path: '/sign-in',
-            name: 'signin',
-            component: () =>
-                import ('./views/Signin.vue')
-        },
-        {
-            path: '/join',
-            name: 'join',
-            component: () =>
-                import ('./views/Join.vue')
+            path: '/profile',
+            name: 'profile',
+            component: Profile
         }
     ]
 });

@@ -55,13 +55,13 @@
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" dark app class="indigo">
-      <v-layout column align-center>
-        <v-flex class="mt-5">
+      <v-layout column align-center v-for="users in user" :key="users.name" >
+        <v-flex class="mt-5" router :to="users.route">
           <v-avatar size="100">
             <img src="@/assets/avatars/user.png" alt="user.png" />
           </v-avatar>
-          <p class="white--text subheading mt-1">
-            usuario 1
+          <p class="white--text subheading mt-2 ">
+            {{users.name}}
           </p>
         </v-flex>
       </v-layout>
@@ -93,9 +93,9 @@ export default {
       drawer: false,
       icon_drawer: true,
       links: [
-        { icon: "dashboard", text: "e-sports Hub", route: "/" },
-        { icon: "mdi-xbox-controller", text: "Toneos", route: "/folder" },
-        { icon: "person", text: "Jugadores", route: "/players" },
+        { icon: "mdi-video", text: "Streamings", route: "/streams" },
+        { icon: "mdi-xbox-controller", text: "Torneos", route: "/torneos" },
+        { icon: "person", text: "Jugadores", route: "/jugadores" },
         { icon: "mdi-logout", text: "Cerrar Sesión", route: "/configuration" }
       ],
       deploy: [
@@ -103,14 +103,17 @@ export default {
           icon: "mdi-arrow-right-bold",
           title: "Iniciar Sesión",
           text: "Iniciar Sesión",
-          route: "/Login"
+          route: "/login"
         },
         {
           icon: "mdi-checkbook",
           title: "About",
           text: "About",
-          route: "/About"
+          route: "/about"
         }
+      ],
+      user: [
+        {name: "Usuario 1", route: "/profile"}
       ]
     };
   },

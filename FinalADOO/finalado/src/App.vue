@@ -5,8 +5,6 @@
     <CParallax />
     <BParallax />
     <AFooter />
-    <Login />
-    <Signup />
   </v-app>
 </template>
 
@@ -16,9 +14,6 @@ import AParallax from "@/components/AParallax.vue";
 import AFooter from "@/components/AFooter.vue";
 import BParallax from "@/components/BParallax.vue";
 import CParallax from "@/components/CParallax.vue";
-import Login from "@/components/Login.vue";
-import Signup from "@/components/Signup.vue";
-// import Profile from "@/components/Profile.vue";
 
 export default {
   name: "App",
@@ -28,11 +23,7 @@ export default {
     AParallax,
     AFooter,
     BParallax,
-    CParallax,
-    //  TODO: Comentar o borrar al terminar presentación
-    Login,
-    Signup
-    // Profile
+    CParallax
   },
 
   data: () => ({

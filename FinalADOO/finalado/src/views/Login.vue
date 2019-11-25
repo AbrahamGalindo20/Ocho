@@ -1,5 +1,5 @@
 <template>
-  <v-container fill-height>
+  <v-container fill-height class="login">
     <v-layout align-center justify-center>
       <v-flex xs12 sm8 md8>
         <v-form>
