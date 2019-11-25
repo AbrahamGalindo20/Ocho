@@ -1,32 +1,20 @@
 <template>
   <v-app>
-    <v-parallax dark src="./assets/lol2016.jpg">
-      <v-toolbar>
-        <v-toolbar-title> Titulo </v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-toolbar-items>
-          <v-btn flat>
-            <v-icon>mdi-xbox-controller</v-icon>
-            Hola
-          </v-btn>
-          <v-btn>
-            <v-icon>fas fa-lock</v-icon>
-            About
-          </v-btn>
-          <v-btn>Contact</v-btn>
-        </v-toolbar-items>
-      </v-toolbar>
-      <v-card> </v-card>
-      <!-- <main></main> -->
-    </v-parallax>
+    <AToolbar />
+    <AParallax dark> </AParallax>
   </v-app>
 </template>
 
 <script>
+import AToolbar from "@/components/AToolbar.vue";
+import AParallax from "@/components/AParallax.vue";
 export default {
   name: "App",
 
-  components: {},
+  components: {
+    AToolbar,
+    AParallax
+  },
 
   data: () => ({
     //
