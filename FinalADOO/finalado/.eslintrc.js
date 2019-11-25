@@ -1,12 +1,23 @@
 module.exports = {
-    "parserOptions": {
-        "ecmaVersion": 7,
-        "sourceType": "module",
-        "ecmaFeatures": {
-            "jsx": true
-        }
+    "env": {
+        "browser": true,
+        "es6": true
     },
+    "extends": [
+        "eslint:recommended",
+        "plugin:vue/essential"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "vue"
+    ],
     "rules": {
-        "semi": "error"
     }
-}
+};

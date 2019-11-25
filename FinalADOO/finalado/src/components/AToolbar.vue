@@ -37,7 +37,12 @@
               @click="of"
             >
               <v-list-item-title align-content-space-between>
-                <v-btn text small flat>
+                <v-btn
+                  text
+                  small
+                  flat
+                  v-on:click="redirect_to(item_deploy.route)"
+                >
                   <v-icon icon>{{ item_deploy.icon }}</v-icon>
                   {{ item_deploy.text }}
                 </v-btn>
@@ -97,9 +102,15 @@ export default {
         {
           icon: "mdi-arrow-right-bold",
           title: "Iniciar Sesión",
-          text: "Iniciar Sesión"
+          text: "Iniciar Sesión",
+          route: "/Login"
         },
-        { icon: "mdi-checkbook", title: "About", text: "About" }
+        {
+          icon: "mdi-checkbook",
+          title: "About",
+          text: "About",
+          route: "/About"
+        }
       ]
     };
   },
@@ -107,11 +118,8 @@ export default {
     redirect_to_main() {
       window.location.href = "/index";
     },
-    redirect_to_profile() {
-      window.location.href = " /profile";
-    },
-    redirect_to_about() {
-      window.location.href = " /about";
+    redirect_to($route) {
+      window.location.href = "http://localhost:8080" + $route;
     }
   }
 };
