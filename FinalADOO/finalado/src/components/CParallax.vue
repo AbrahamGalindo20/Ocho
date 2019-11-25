@@ -19,7 +19,16 @@
           </h4>
         </v-col>
       </v-row>
-      <!-- <v-playback :url="vid_url" width="10%"/> -->
+      <iframe
+        src="https://player.twitch.tv/?video=v367046564&autoplay=true&muted=false"
+        height="70%"
+        width="50%"
+        frameborder="<frameborder>"
+        scrolling="<scrolling>"
+        allowfullscreen="<allowfullscreen>"
+        autoplay="true"
+      >
+      </iframe>
     </v-parallax>
   </div>
 </template>
@@ -36,7 +45,7 @@ export default {
 </script>
 
 <style lang="css">
-.v-parallax{
- size:100% 100%;
+.v-parallax {
+  size: 100% 100%;
 }
 </style>
