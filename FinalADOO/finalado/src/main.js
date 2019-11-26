@@ -6,7 +6,7 @@ import VueRouter from 'vue-router';
 Vue.config.productionTip = false;
 Vue.use(VueRouter)
 
-import About from './views/About.vue'
+import About from './pages/About.vue'
 
 const routers = [{
     name: 'about',
