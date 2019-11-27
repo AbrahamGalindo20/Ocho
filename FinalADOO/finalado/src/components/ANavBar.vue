@@ -118,7 +118,7 @@ export default {
   },
   methods: {
     redirect_to_main() {
-      window.location.href = "/index";
+      window.location.href = "/";
     },
     redirect_to($route) {
       window.location.href = "http://localhost:8080" + $route;

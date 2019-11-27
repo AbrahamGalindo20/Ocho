@@ -54,6 +54,7 @@ export default {
   }),
   methods: {
     login() {
+      this.$router.push("/index");
       this.$store
         .dispatch("LOGIN", {
           username: this.username,

@@ -1,6 +1,6 @@
 <template>
-  <div class="streamings">
-    <h1>Hola soy una ventana de streamings</h1>
+  <div>
+    <h1>Hola soy una ventana de torneos</h1>
   </div>
 </template>
 

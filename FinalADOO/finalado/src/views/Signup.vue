@@ -83,6 +83,7 @@ export default {
   methods: {
     register() {
       if (this.valid()) {
+        this.$router.push("/login");
         this.$store
           .dispatch("REGISTER", {
             username: this.username,
@@ -96,11 +97,16 @@ export default {
                 "Your account has been successfully created! you can now login.",
               alertClass: "danger"
             });
+            /* eslint-disable no-alert, no-console */
             console.log(status);
+            /* eslint-disable no-alert, no-console */
             this.$router.push("/login");
           })
           .catch(error => {
             this.userExists = true;
+            /* eslint-disable no-alert, no-console */
+            console.log(error);
+            /* eslint-disable no-alert, no-console */
           });
       }
     },

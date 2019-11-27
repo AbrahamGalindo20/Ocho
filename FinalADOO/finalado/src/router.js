@@ -2,9 +2,12 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from '@/views/Home.vue';
 import Login from '@/views/Login.vue';
-// import Signup from '@/views/Signup.vue';
+import Signup from '@/views/Signup.vue';
 // import Profile from '@/pages/Profile.vue';
-import About from '@/pages/About.vue';
+import About from '@/views/About.vue';
+import Streamings from './views/Streamings.vue';
+import Torneos from './views/Torneos.vue';
+import Jugadores from './views/Jugadores.vue';
 
 Vue.use(Router);
 
@@ -24,6 +27,31 @@ export default new Router({
             path: '/login',
             name: 'login',
             component: Login
+        },
+        {
+            path: '/index',
+            name: 'index',
+            component: Home
+        },
+        {
+            path: '/streams',
+            name: 'stream',
+            component: Streamings
+        },
+        {
+            path: '/torneos',
+            name: 'torneos',
+            component: Torneos
+        },
+        {
+            path: '/jugadores',
+            name: 'jugadores',
+            component: Jugadores
+        },
+        {
+            path: '/signup',
+            name: 'signup',
+            component: Signup
         }
     ]
 });
