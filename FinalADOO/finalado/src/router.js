@@ -9,6 +9,8 @@ import Streamings from "./views/Streamings.vue";
 import Torneos from "./views/Torneos.vue";
 import Jugadores from "./views/Jugadores.vue";
 import Configuration from "./views/Configuration.vue";
+import SignOut from "./views/SignOut.vue";
+
 
 Vue.use(Router);
 
@@ -58,6 +60,11 @@ export default new Router({
             path: "/configuration",
             name: "configuration",
             component: Configuration
+        },
+        {
+            path: "/signout",
+            name: "signout",
+            component: SignOut
         }
     ]
 });
