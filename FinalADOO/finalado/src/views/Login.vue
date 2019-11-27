@@ -44,6 +44,7 @@
 </template>
 
 <script>
+/* eslint eqeqeq: "off", curly: "error" */
 export default {
   name: "login",
   data: () => ({
@@ -59,12 +60,16 @@ export default {
           password: this.password
         })
         .then(success => {
+          /* eslint-disable no-alert, no-console */
           this.$router.push("/index");
           console.log(success);
+          /* eslint-enable no-alert, no-console */
         })
+        /* eslint-disable no-alert, no-console */
         .catch(error => {
           this.error = true;
-          console.error(error);
+          console.log(error);
+          /* eslint-enable no-alert, no-console */
         });
     }
   }

@@ -19,5 +19,8 @@ module.exports = {
         "vue"
     ],
     "rules": {
+        "eqeqeq": "off",
+        "curly": "error",
+        "quotes": ["error", "double"]
     }
 };

@@ -1,14 +1,12 @@
 <template>
   <div class="profile">
-    <AToolbar />
+    <h1>Profile</h1>
   </div>
 </template>
 
 <script>
-import AToolBar from "@/components/AToolbar.vue";
 export default {
   components: {
-    AToolBar
   }
 };
 </script>

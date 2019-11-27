@@ -34,7 +34,6 @@
             <v-list-item
               v-for="(item_deploy, index) in deploy"
               :key="index"
-              @click="of"
             >
               <v-list-item-title align-content-space-between>
                 <v-btn

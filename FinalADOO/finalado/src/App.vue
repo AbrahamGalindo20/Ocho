@@ -1,15 +1,20 @@
 <template>
   <v-app>
-    <AToolbar />
-    <AParallax />
-    <CParallax />
-    <BParallax />
+    <ANavBar />
+
+    <v-content>
+      <router-view />
+      <AParallax />
+      <CParallax />
+      <BParallax />
+    </v-content>
+
     <AFooter />
   </v-app>
 </template>
 
 <script>
-import AToolbar from "@/components/AToolbar.vue";
+import ANavBar from "@/components/ANavBar.vue";
 import AParallax from "@/components/AParallax.vue";
 import AFooter from "@/components/AFooter.vue";
 import BParallax from "@/components/BParallax.vue";
@@ -19,7 +24,7 @@ export default {
   name: "App",
 
   components: {
-    AToolbar,
+    ANavBar,
     AParallax,
     AFooter,
     BParallax,
