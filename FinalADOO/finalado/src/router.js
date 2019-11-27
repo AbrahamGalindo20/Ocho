@@ -1,57 +1,63 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import Home from '@/views/Home.vue';
-import Login from '@/views/Login.vue';
-import Signup from '@/views/Signup.vue';
-// import Profile from '@/pages/Profile.vue';
-import About from '@/views/About.vue';
-import Streamings from './views/Streamings.vue';
-import Torneos from './views/Torneos.vue';
-import Jugadores from './views/Jugadores.vue';
+import Vue from "vue";
+import Router from "vue-router";
+import Home from "@/views/Home.vue";
+import Login from "@/views/Login.vue";
+import Signup from "@/views/Signup.vue";
+// import Profile from "@/pages/Profile.vue";
+import About from "@/views/About.vue";
+import Streamings from "./views/Streamings.vue";
+import Torneos from "./views/Torneos.vue";
+import Jugadores from "./views/Jugadores.vue";
+import Configuration from "./views/Configuration.vue";
 
 Vue.use(Router);
 
 export default new Router({
-    mode: 'history',
+    mode: "history",
     routes: [{
-            path: '',
-            name: 'home',
+            path: "",
+            name: "home",
             component: Home
         },
         {
-            path: '/about',
-            name: 'about',
+            path: "/about",
+            name: "about",
             component: About
         },
         {
-            path: '/login',
-            name: 'login',
+            path: "/login",
+            name: "login",
             component: Login
         },
         {
-            path: '/index',
-            name: 'index',
+            path: "/index",
+            name: "index",
             component: Home
         },
         {
-            path: '/streams',
-            name: 'stream',
+            path: "/streams",
+            name: "stream",
             component: Streamings
         },
         {
-            path: '/torneos',
-            name: 'torneos',
+            path: "/torneos",
+            name: "torneos",
             component: Torneos
         },
         {
-            path: '/jugadores',
-            name: 'jugadores',
+            path: "/jugadores",
+            name: "jugadores",
             component: Jugadores
         },
         {
-            path: '/signup',
-            name: 'signup',
+            path: "/signup",
+            name: "signup",
             component: Signup
+        },
+        {
+            path: "/configuration",
+            name: "configuration",
+            component: Configuration
         }
     ]
 });

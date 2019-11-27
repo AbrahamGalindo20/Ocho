@@ -97,7 +97,8 @@ export default {
         { icon: "mdi-video", text: "Streamings", route: "/streams" },
         { icon: "mdi-xbox-controller", text: "Torneos", route: "/torneos" },
         { icon: "person", text: "Jugadores", route: "/jugadores" },
-        { icon: "mdi-logout", text: "Cerrar Sesión", route: "/configuration" }
+        { icon: "mdi-wrench", text: "Configuración", route: "/configuration" },
+        { icon: "mdi-logout", text: "Cerrar Sesión", route: "/signout" }
       ],
       deploy: [
         {
