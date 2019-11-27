@@ -41,26 +41,25 @@
       <v-row align="center" justify="start">
         <v-col class="text-center" cols="4">
           <h4 class="display-1 font-weight-light mb-1">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam
-            accusamus dolorum sed ut, tempore pariatur dolorem! Accusantium
-            aliquid atque facere cumque error, repudiandae officiis, asperiores
-            harum consequatur qui delectus cum!
+            Nuestro objetivo es recopilar toda la información disponible en
+            linea en una sola página para evitar busquedas innecesarias,
+            información anticuada y confuciones a la hora de ver transmisiones
+            en vivo.
           </h4>
         </v-col>
         <v-col class="text-center" cols="4">
           <h4 class="display-1 font-weight-light mb-1">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam
-            accusamus dolorum sed ut, tempore pariatur dolorem! Accusantium
-            aliquid atque facere cumque error, repudiandae officiis, asperiores
-            harum consequatur qui delectus cum!
+            Nuestra misión es brindar conocimiento de e-sports al mundo,
+            mostrando a nuevos públicos diferentes ligas, abriendo el mundo de
+            los e-sports al público general y crecer junto con los aficionados
+            en el mundo de los deportes electrónicos.
           </h4>
         </v-col>
         <v-col class="text-center" cols="4">
           <h4 class="display-1 font-weight-light mb-1">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam
-            accusamus dolorum sed ut, tempore pariatur dolorem! Accusantium
-            aliquid atque facere cumque error, repudiandae officiis, asperiores
-            harum consequatur qui delectus cum!
+            Nuestra visión en ser la página principal de e-sports en el mundo,
+            adoptando nuevas tenologías, nuevas ligas, fomentando una buena
+            competitividad.
           </h4>
         </v-col>
       </v-row>
