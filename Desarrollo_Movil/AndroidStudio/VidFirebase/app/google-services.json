@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "961947467469",
-    "firebase_url": "https://adoo-46d78.firebaseio.com",
-    "project_id": "adoo-46d78",
-    "storage_bucket": "adoo-46d78.appspot.com"
+    "project_number": "431852300693",
+    "firebase_url": "https://video-firebase-377ef.firebaseio.com",
+    "project_id": "video-firebase-377ef",
+    "storage_bucket": "video-firebase-377ef.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:961947467469:android:2ebf8eadf9f2161f077384",
+        "mobilesdk_app_id": "1:431852300693:android:43897a35ad579bb830ee9c",
         "android_client_info": {
           "package_name": "com.example.vidfirebase"
         }
       },
       "oauth_client": [
         {
-          "client_id": "961947467469-82spjse2het2vq9ahbp6ea44lhebkun9.apps.googleusercontent.com",
+          "client_id": "431852300693-2u5lrotcel9k6gk6uqoq3j4363tmiqal.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA60B2sMYhU8w32Z5wSpxqKsmkDr6ddLbY"
+          "current_key": "AIzaSyCi9-P5kzTDubymZ68tqSznFitWamS6uEY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "961947467469-82spjse2het2vq9ahbp6ea44lhebkun9.apps.googleusercontent.com",
+              "client_id": "431852300693-2u5lrotcel9k6gk6uqoq3j4363tmiqal.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
