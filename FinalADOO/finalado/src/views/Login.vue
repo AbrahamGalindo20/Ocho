@@ -6,11 +6,11 @@
           <v-flex xs12 sm8 md8>
             <v-form>
               <v-card class="elevation-6">
-                <v-toolbar dark color="blue">
-                  <v-toolbar-title>Login form</v-toolbar-title>
+                <v-toolbar dark color="indigo">
+                  <v-toolbar-title>Login </v-toolbar-title>
                 </v-toolbar>
                 <v-alert color="error" :value="error" icon="close">
-                  The username or the password are incorrect.
+                  Datos incorrectos
                 </v-alert>
                 <v-card-text>
                   <v-text-field
@@ -19,7 +19,7 @@
                     name="login"
                     label="Login"
                     type="text"
-                  ></v-text-field>
+                  />
 
                   <v-text-field
                     v-model="password"
@@ -27,7 +27,7 @@
                     name="password"
                     label="Password"
                     type="password"
-                  ></v-text-field>
+                  />
                 </v-card-text>
                 <v-divider light></v-divider>
                 <v-card-actions>

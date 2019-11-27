@@ -31,17 +31,9 @@
             </button>
           </template>
           <v-list>
-            <v-list-item
-              v-for="(item_deploy, index) in deploy"
-              :key="index"
-            >
+            <v-list-item v-for="(item_deploy, index) in deploy" :key="index">
               <v-list-item-title align-content-space-between>
-                <v-btn
-                  text
-                  small
-                  flat
-                  v-on:click="redirect_to(item_deploy.route)"
-                >
+                <v-btn text small flat :to="item_deploy.route">
                   <v-icon icon>{{ item_deploy.icon }}</v-icon>
                   {{ item_deploy.text }}
                 </v-btn>
@@ -97,8 +89,7 @@ export default {
         { icon: "mdi-video", text: "Streamings", route: "/streams" },
         { icon: "mdi-xbox-controller", text: "Torneos", route: "/torneos" },
         { icon: "person", text: "Jugadores", route: "/jugadores" },
-        { icon: "mdi-wrench", text: "Configuración", route: "/configuration" },
-        { icon: "mdi-logout", text: "Cerrar Sesión", route: "/signout" }
+        { icon: "mdi-wrench", text: "Configuración", route: "/configuration" }
       ],
       deploy: [
         {
@@ -106,6 +97,12 @@ export default {
           title: "Iniciar Sesión",
           text: "Iniciar Sesión",
           route: "/login"
+        },
+        {
+          icon: "mdi-logout",
+          title: "SignOut",
+          text: "Cerrar Sesión",
+          route: "/signout"
         },
         {
           icon: "mdi-checkbook",
@@ -120,6 +117,9 @@ export default {
   methods: {
     redirect_to_main() {
       window.location.href = "/";
+    },
+    sign_out() {
+      window.location.href = "/signout";
     },
     redirect_to($route) {
       window.location.href = "http://localhost:8080" + $route;

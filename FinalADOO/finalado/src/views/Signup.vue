@@ -5,8 +5,8 @@
         <v-layout align-center justify-center>
           <v-flex xs12 sm8 md8>
             <v-card class="elevation-12">
-              <v-toolbar dark color="blue">
-                <v-toolbar-title>Signup form</v-toolbar-title>
+              <v-toolbar dark color="indigo">
+                <v-toolbar-title>Registro</v-toolbar-title>
               </v-toolbar>
               <v-card-text>
                 <v-form>
