@@ -37,9 +37,7 @@
 <script>
 export default {
   data() {
-    return {
-      vid_url: "@/assets/videos/vid1.mp4"
-    };
+    return {};
   },
   components: {}
 };

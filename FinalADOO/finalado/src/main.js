@@ -6,12 +6,12 @@ import VueRouter from 'vue-router';
 Vue.config.productionTip = false;
 Vue.use(VueRouter)
 
-import About from './pages/About.vue'
+import Home from './views/Home.vue'
 
 const routers = [{
-    name: 'about',
-    path: '/about',
-    component: About
+    name: 'home',
+    path: '',
+    component: Home
 }]
 
 const router = new VueRouter({ mode: 'history', router: routers })

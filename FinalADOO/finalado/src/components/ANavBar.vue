@@ -55,13 +55,13 @@
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" dark app class="indigo">
-      <v-layout column align-center v-for="users in user" :key="users.name" >
+      <v-layout column align-center v-for="users in user" :key="users.name">
         <v-flex class="mt-5" router :to="users.route">
           <v-avatar size="100">
             <img src="@/assets/avatars/user.png" alt="user.png" />
           </v-avatar>
           <p class="white--text subheading mt-2 ">
-            {{users.name}}
+            {{ users.name }}
           </p>
         </v-flex>
       </v-layout>
@@ -72,9 +72,11 @@
           router
           :to="link.route"
         >
-          <v-list-item-icon>
-            <v-icon class="white--text">{{ link.icon }}</v-icon>
-          </v-list-item-icon>
+          <v-list-item-action>
+            <v-list-item-icon>
+              <v-icon class="white--text">{{ link.icon }}</v-icon>
+            </v-list-item-icon>
+          </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title class="white--text">
               {{ link.text }}
@@ -112,9 +114,7 @@ export default {
           route: "/about"
         }
       ],
-      user: [
-        {name: "Usuario 1", route: "/profile"}
-      ]
+      user: [{ name: "Usuario 1", route: "/profile" }]
     };
   },
   methods: {

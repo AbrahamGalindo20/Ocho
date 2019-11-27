@@ -1,39 +1,27 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import App from '@/App.vue';
+import Home from '@/views/Home.vue';
 import Login from '@/views/Login.vue';
 import Signup from '@/views/Signup.vue';
-import Profile from '@/views/Profile.vue';
-import About from '@/views/About.vue';
+import Profile from '@/pages/Profile.vue';
+import About from '@/pages/About.vue';
 
 Vue.use(Router);
 export default new Router({
     mode: 'history',
     base: process.env.BASE_URL,
     routes: [{
-            path: '/',
-            name: 'app',
-            component: App
-        },
-        {
-            path: '/login',
-            name: 'login',
-            component: Login
-        },
-        {
-            path: '/signup',
-            name: 'signup',
-            component: Signup
-        },
-        {
-            path: '/about',
-            name: 'about',
-            component: About
-        },
-        {
-            path: '/profile',
-            name: 'profile',
-            component: Profile
-        }
-    ]
+        path: '',
+        component: App,
+        children: [{
+                path: 'login',
+                component: Login
+            },
+            {
+                path: 'about',
+                component: About
+            }
+        ]
+    }]
 });

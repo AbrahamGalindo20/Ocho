@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "961947467469",
+    "firebase_url": "https://adoo-46d78.firebaseio.com",
+    "project_id": "adoo-46d78",
+    "storage_bucket": "adoo-46d78.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961947467469:android:2ebf8eadf9f2161f077384",
+        "android_client_info": {
+          "package_name": "com.example.vidfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "961947467469-82spjse2het2vq9ahbp6ea44lhebkun9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA60B2sMYhU8w32Z5wSpxqKsmkDr6ddLbY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "961947467469-82spjse2het2vq9ahbp6ea44lhebkun9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
