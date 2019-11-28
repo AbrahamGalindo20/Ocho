@@ -3,14 +3,13 @@ import Router from "vue-router";
 import Home from "@/views/Home.vue";
 import Login from "@/views/Login.vue";
 import Signup from "@/views/Signup.vue";
-// import Profile from "@/pages/Profile.vue";
+import Profile from "@/pages/Profile.vue";
 import About from "@/views/About.vue";
 import Streamings from "./views/Streamings.vue";
 import Torneos from "./views/Torneos.vue";
 import Jugadores from "./views/Jugadores.vue";
 import Configuration from "./views/Configuration.vue";
 import SignOut from "./views/SignOut.vue";
-
 
 Vue.use(Router);
 
@@ -19,7 +18,7 @@ export default new Router({
     routes: [{
             path: "",
             name: "home",
-            component: Home
+            component: Home,
         },
         {
             path: "/about",
@@ -65,6 +64,11 @@ export default new Router({
             path: "/signout",
             name: "signout",
             component: SignOut
+        },
+        {
+            path: "/profile",
+            name: "profile",
+            components: Profile
         }
     ]
 });

@@ -14,7 +14,7 @@
                 </v-alert>
                 <v-card-text>
                   <v-text-field
-                    v-model="username"
+                    v-model="email"
                     prepend-icon="person"
                     name="login"
                     label="Login"
@@ -38,6 +38,16 @@
                     <v-icon>keyboard_arrow_right</v-icon>
                   </v-btn>
                 </v-card-actions>
+                <p :align="center" :justify="center" class="ml-2">
+                  O conectate con Google <br />
+                  <button @click="socialLogin" class="social-button">
+                    <img
+                      src="@/assets/pictures/googleLogo.png"
+                      alt="googleicon"
+                      width="5%"
+                    />
+                  </button>
+                </p>
               </v-card>
             </v-form>
           </v-flex>
@@ -48,20 +58,30 @@
 </template>
 
 <script>
-/* eslint eqeqeq: "off", curly: "error" */
+import firebase from "firebase";
 export default {
   name: "login",
   data: () => ({
-    username: "",
+    email: "",
     password: "",
     error: false
   }),
   methods: {
     login() {
-      this.$router.push("/index");
-      this.$store
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(this.email, this.password)
+        .then(
+          function(user) {
+            alert("Conexión realizada, hola " + user);
+            this.$route.push("/index");
+          },
+          function(error) {
+            alert("Error:" + error.message);
+          }
+        )
         .dispatch("LOGIN", {
-          username: this.username,
+          email: this.email,
           password: this.password
         })
         .then(success => {
@@ -75,6 +95,17 @@ export default {
           this.error = true;
           console.log(error);
           /* eslint-enable no-alert, no-console */
+        });
+    },
+    socialLogin() {
+      const provider = new firebase.auth.GoogleAuthProvider();
+
+      firebase
+        .auth()
+        .signInWithPopup(provider)
+        .then(result => {
+          this.$router.replace("index");
+          alert("Bienbenido: " + result);
         });
     }
   }

@@ -1,17 +1,10 @@
 <template>
-  <v-app>
-      <AToolbar/>
-  </v-app>
+  <v-app> </v-app>
 </template>
 
 <script>
-import AToolbar from "../components/AToolbar";
-
 export default {
-    components:{
-        AToolbar
-    }
-
+  components: {}
 };
 </script>
 

@@ -111,7 +111,7 @@ export default {
           route: "/about"
         }
       ],
-      user: [{ name: "Usuario 1", route: "/profile" }]
+      user: [{ name: "as", route: "/profile" }]
     };
   },
   methods: {

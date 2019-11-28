@@ -69,6 +69,7 @@
 </template>
 
 <script>
+import firebase from "firebase";
 export default {
   name: "signup",
   data: () => ({
@@ -88,31 +89,18 @@ export default {
   methods: {
     register() {
       if (this.valid()) {
-        this.$router.push("/login");
-        this.$store
-          .dispatch("REGISTER", {
-            username: this.username,
-            email: this.email,
-            password: this.password
-          })
-          .then(({ status }) => {
-            this.$store.commit("SET_NOTIFICATION", {
-              display: true,
-              text:
-                "Your account has been successfully created! you can now login.",
-              alertClass: "danger"
-            });
-            /* eslint-disable no-alert, no-console */
-            console.log(status);
-            /* eslint-disable no-alert, no-console */
-            this.$router.push("/login");
-          })
-          .catch(error => {
-            this.userExists = true;
-            /* eslint-disable no-alert, no-console */
-            console.log(error);
-            /* eslint-disable no-alert, no-console */
-          });
+        firebase
+          .auth()
+          .createUserWithEmailAndPassword(this.email, this.password)
+          .then(
+            function(username) {
+              alert("Cuenta creada! usuario: " + username);
+              this.$route.push("/login");
+            },
+            function(error) {
+              alert("Error creando cuenta: " + error.message);
+            }
+          );
       }
     },
     valid() {

@@ -7,7 +7,21 @@
 </template>
 
 <script>
-export default {};
+import firebase from "firebase";
+export default {
+  name: "signout",
+  components: {},
+  methods: {
+    lopout: function() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          this.$router.replace("login");
+        });
+    }
+  }
+};
 </script>
 
 <style></style>
