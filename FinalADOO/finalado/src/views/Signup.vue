@@ -14,7 +14,6 @@
                     >This user already exists, try a different set of
                     data.</v-alert
                   >
-
                   <v-text-field
                     prepend-icon="person"
                     name="login"
@@ -22,7 +21,6 @@
                     label="Login"
                     :rules="[rules.required]"
                   ></v-text-field>
-
                   <v-text-field
                     prepend-icon="email"
                     name="email"
@@ -95,6 +93,8 @@ export default {
           .then(
             function(username) {
               alert("Cuenta creada! usuario: " + username);
+              var semail = firebase.auth().currentUser;
+              semail.sendEmailVerification();
               this.$route.push("/login");
             },
             function(error) {

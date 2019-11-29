@@ -49,7 +49,12 @@
       <v-layout column align-center v-for="users in user" :key="users.name">
         <v-flex class="mt-5" router :to="users.route">
           <v-avatar size="100">
-            <img src="@/assets/avatars/user.png" alt="user.png" />
+            <v-img
+              src="@/assets/pictures/userhombre.png"
+              v-on:click="redirect_to_main"
+              width="50%"
+              class="mx-auto"
+            ></v-img>
           </v-avatar>
           <p class="white--text subheading mt-2 ">
             {{ users.name }}
@@ -88,8 +93,7 @@ export default {
       links: [
         { icon: "mdi-video", text: "Streamings", route: "/streams" },
         { icon: "mdi-xbox-controller", text: "Torneos", route: "/torneos" },
-        { icon: "person", text: "Jugadores", route: "/jugadores" },
-        { icon: "mdi-wrench", text: "Configuración", route: "/configuration" }
+        { icon: "person", text: "Jugadores", route: "/jugadores" }
       ],
       deploy: [
         {
@@ -111,7 +115,13 @@ export default {
           route: "/about"
         }
       ],
-      user: [{ name: "as", route: "/profile" }]
+      user: [
+        {
+          name: "EmiElFeroz",
+          route: "/profile",
+          icon: "<img src='@/assets/avatars/user.png' alt='user.png' />"
+        }
+      ]
     };
   },
   methods: {

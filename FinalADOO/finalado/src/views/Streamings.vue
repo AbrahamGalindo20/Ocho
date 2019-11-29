@@ -1,10 +1,36 @@
 <template>
-  <div class="streamingsView">
-    <v-app id="reproductor">
-      <v-card height="100%">
-        <VueTwitchPlayer :channel="datos[number].channel"></VueTwitchPlayer>
-      </v-card>
-    </v-app>
+  <div id="wrapper">
+    <div id="stream">
+      <VueTwitchPlayer :channel="datos[number].channel"></VueTwitchPlayer>
+    </div>
+
+    <div id="Streams" class="my-auto py-auto">
+      <v-container fluid>
+        <v-row>
+          <v-col cols="12">
+            <v-row
+              align="center"
+              justify="space-around"
+              class="grey lighten-5"
+              style="height: 300px;"
+            >
+              <v-card
+                v-for="videos in datos"
+                :key="videos.title"
+                class="ma-3 pa-6"
+                outlined
+                tile
+              >
+                {{ videos.title }}
+                <br />
+                canal: {{ videos.channel }}
+                <VueTwitchPlayer :channel="videos.channel"></VueTwitchPlayer>
+              </v-card>
+            </v-row>
+          </v-col>
+        </v-row>
+      </v-container>
+    </div>
   </div>
 </template>
 
@@ -47,6 +73,21 @@ export default {
           title: "Fortnite",
           channel: "fortnite",
           descripcion: "Canal oficial de Fortnite"
+        },
+        {
+          title: "Faker",
+          channel: "faker",
+          descripcion: "Canal oficial de Faker"
+        },
+        {
+          title: "Mata",
+          channel: "mata",
+          descripcion: "Canal oficial de Mata"
+        },
+        {
+          title: "Sneaky",
+          channel: "sneaky",
+          descripcion: "Canal oficial de Sneaky"
         }
       ],
       min: 0,
@@ -83,8 +124,20 @@ export default {
 };
 </script>
 
-<style lang="scss">
-#reproductor {
+<style type="text/css">
+html,
+body {
   height: 100%;
+  margin: 0;
+}
+
+#stream iframe {
+  width: 100%;
+  height: 500px;
+}
+
+#Steams iframe {
+  width: 200px;
+  height: 150px;
 }
 </style>

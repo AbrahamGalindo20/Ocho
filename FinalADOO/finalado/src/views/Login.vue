@@ -98,15 +98,19 @@ export default {
         });
     },
     socialLogin() {
-      const provider = new firebase.auth.GoogleAuthProvider();
+      if (firebase.auth().getUser()) {
+        alert("Cerrar sesión antes");
+      } else {
+        const provider = new firebase.auth.GoogleAuthProvider();
 
-      firebase
-        .auth()
-        .signInWithPopup(provider)
-        .then(result => {
-          this.$router.replace("index");
-          alert("Bienbenido: " + result);
-        });
+        firebase
+          .auth()
+          .signInWithPopup(provider)
+          .then(result => {
+            this.$router.replace("index");
+            alert("Bienbenido: " + result);
+          });
+      }
     }
   }
 };

@@ -1,18 +1,14 @@
 <template>
   <div>
-    <v-footer height="auto" color="indigo" dark dense padless>
+    <v-footer height="auto" color="indigo-6" dark absolute>
       <v-layout justify-center row wrap>
         <v-flex color="indigo" dark py-3 text-center white--text xs12>
           &copy;2019 — <strong>e-sports Hub</strong>
           <div>
-            Icons made by
-            <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
-              >Freepik</a
-            >
+            Streams made by
+            <a href="https://www.twitch.tv" title="Twitch">Twitch</a>
             from
-            <a href="https://www.flaticon.com/" title="Flaticon"
-              >www.flaticon.com</a
-            >
+            <a href="https://www.twitch.tv" title="Twitch">www.twitch.com</a>
           </div>
         </v-flex>
       </v-layout>
