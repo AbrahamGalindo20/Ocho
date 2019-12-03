@@ -82,9 +82,16 @@ def getGeneraciones():
             return int(tam_gen)
 
 
-def probabilidadMut(prob_mut, array_prob):
-    prob = prob_mut
-
+def probabilidadMut(prob_mut, array_prob, num_individuos):
+    num = round(num_individuos / prob_mut)
+    y = [None] * num_individuos
+    for x in range(0,num_individuos):
+        y[x] = num * prob_mut
+        if(y[x] > 0.5):
+            y[x] = num
+        else:
+            y[x] = 0
+    return y
 
 def probabilidadCruce(prob_cruce, array_prob):
     prob = prob_cruce
@@ -234,15 +241,15 @@ def OpcionFitness():
             if(tipo_seleccion == 1):
                 print("Selección por ruleta 1\n")
                 padres[y] = probabilidadCruce(prob_cruce, array_prob)
-                mutados[y] = probabilidadMut(prob_mut, array_prob)
+                mutados[y] = probabilidadMut(prob_mut, array_prob, num_individuos)
             elif(tipo_seleccion == 2):
                 print("Selección por ruleta 2\n")
                 padres[y] = probabilidadCruce(prob_cruce, array_prob)
-                mutados[y] = probabilidadMut(prob_mut, array_prob)
+                mutados[y] = probabilidadMut(prob_mut, array_prob, num_individuos)
             elif(tipo_seleccion == 3):
                 print("Selección por torneo\n")
                 padres[y] = probabilidadCruce(prob_cruce, array_prob)
-                mutados[y] = probabilidadMut(prob_mut, array_prob)
+                mutados[y] = probabilidadMut(prob_mut, array_prob, num_individuos)
 
         print("\n\n\n\narrar sorted: {}".format(array_prob))
 
